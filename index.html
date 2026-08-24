@@ -197,13 +197,55 @@
     <section class="contact section" id="contacto">
       <div class="container contact-card reveal">
         <div class="contact-orbit" aria-hidden="true"></div>
-        <p class="eyebrow"><span></span> Empecemos</p>
-        <h2>Hagamos que la tecnología trabaje <em>a favor de tu negocio.</em></h2>
-        <p>Contanos qué querés ordenar, mejorar o construir. La primera conversación es sin compromiso.</p>
-        <div class="contact-actions">
-          <a class="button button-primary" href="mailto:contacto@aresdigital.site">Escribinos por email <span>↗</span></a>
+        <div class="contact-intro">
+          <p class="eyebrow"><span></span> Empecemos</p>
+          <h2>Contanos brevemente <em>qué necesitás.</em></h2>
+          <p>Esta encuesta nos ayuda a entender tu proyecto antes de conversar. Te responderemos con una primera orientación, sin compromiso.</p>
           <a class="instagram-link" href="https://www.instagram.com/aresdigital.ar/" target="_blank" rel="noreferrer">Instagram · @aresdigital.ar <span>↗</span></a>
         </div>
+        <form class="project-form" action="https://controlares.com/api/aresdigital/contact" method="POST">
+          <input type="text" name="Sitio_web" class="form-honey" tabindex="-1" autocomplete="off">
+
+          <div class="form-grid">
+            <label>Nombre y apellido<input type="text" name="Nombre" autocomplete="name" required></label>
+            <label>Empresa o negocio<input type="text" name="Empresa" autocomplete="organization" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <label>Teléfono o WhatsApp<input type="tel" name="Telefono" autocomplete="tel"></label>
+            <label class="form-wide">¿Qué necesitás?
+              <select name="Tipo_de_proyecto" required>
+                <option value="" selected disabled>Seleccioná una opción</option>
+                <option>Sitio web o tienda online</option>
+                <option>Software a medida</option>
+                <option>Automatización de procesos</option>
+                <option>Control ARES</option>
+                <option>Stock ARES</option>
+                <option>Soporte o mejora de un sistema existente</option>
+                <option>Otro proyecto</option>
+              </select>
+            </label>
+            <label>¿En qué etapa estás?
+              <select name="Etapa_actual" required>
+                <option value="" selected disabled>Seleccioná una opción</option>
+                <option>Es una idea inicial</option>
+                <option>Ya tengo requisitos definidos</option>
+                <option>Ya existe y necesito mejorarlo</option>
+                <option>Necesito resolverlo con urgencia</option>
+              </select>
+            </label>
+            <label>¿Para cuándo lo necesitás?
+              <select name="Plazo_estimado" required>
+                <option value="" selected disabled>Seleccioná una opción</option>
+                <option>Lo antes posible</option>
+                <option>Dentro de 1 mes</option>
+                <option>Entre 1 y 3 meses</option>
+                <option>Sin fecha definida</option>
+              </select>
+            </label>
+            <label class="form-wide">Contanos el problema o resultado que buscás<textarea name="Necesidad_principal" rows="4" maxlength="1200" placeholder="Por ejemplo: queremos vender online, reducir tareas manuales o controlar mejor varias computadoras..." required></textarea></label>
+          </div>
+          <label class="form-consent"><input type="checkbox" name="Acepta_contacto" value="Sí" required><span>Acepto que ARES Digital use estos datos para responder esta consulta.</span></label>
+          <div class="form-footer"><button class="button button-primary" type="submit">Enviar consulta <span>↗</span></button><small>Respondemos personalmente. No compartimos tus datos.</small></div>
+        </form>
       </div>
     </section>
   </main>
