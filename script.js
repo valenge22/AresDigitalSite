@@ -1,6 +1,15 @@
 const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('[data-menu-button]');
 const nav = document.querySelector('[data-nav]');
+const formMessage = document.querySelector('[data-form-message]');
+
+const contactStatus = new URLSearchParams(window.location.search).get('consulta');
+if (formMessage && contactStatus) {
+  formMessage.hidden = false;
+  formMessage.textContent = contactStatus === 'envio'
+    ? 'No pudimos enviar la consulta en este momento. Intentá nuevamente o escribinos a contacto@aresdigital.site.'
+    : 'Revisá los campos obligatorios e intentá nuevamente. El nombre, la empresa y la descripción deben tener al menos 2, 2 y 10 caracteres.';
+}
 
 function updateHeader() {
   header.classList.toggle('scrolled', window.scrollY > 24);

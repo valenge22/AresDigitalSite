@@ -205,10 +205,11 @@
         </div>
         <form class="project-form" action="https://controlares.com/api/aresdigital/contact" method="POST">
           <input type="text" name="Sitio_web" class="form-honey" tabindex="-1" autocomplete="off">
+          <div class="form-message" data-form-message hidden></div>
 
           <div class="form-grid">
-            <label>Nombre y apellido<input type="text" name="Nombre" autocomplete="name" required></label>
-            <label>Empresa o negocio<input type="text" name="Empresa" autocomplete="organization" required></label>
+            <label>Nombre y apellido<input type="text" name="Nombre" minlength="2" maxlength="100" autocomplete="name" required></label>
+            <label>Empresa o negocio<input type="text" name="Empresa" minlength="2" maxlength="140" autocomplete="organization" required></label>
             <label>Email<input type="email" name="email" autocomplete="email" required></label>
             <label>Teléfono o WhatsApp<input type="tel" name="Telefono" autocomplete="tel"></label>
             <label class="form-wide">¿Qué necesitás?
@@ -232,7 +233,7 @@
                 <option>Necesito resolverlo con urgencia</option>
               </select>
             </label>
-            <label class="form-wide">Contanos el problema o resultado que buscás<textarea name="Necesidad_principal" rows="4" maxlength="1200" placeholder="Por ejemplo: queremos vender online, reducir tareas manuales o controlar mejor varias computadoras..." required></textarea></label>
+            <label class="form-wide">Contanos el problema o resultado que buscás<textarea name="Necesidad_principal" rows="4" minlength="10" maxlength="1200" placeholder="Por ejemplo: queremos vender online, reducir tareas manuales o controlar mejor varias computadoras..." required></textarea></label>
           </div>
           <label class="form-consent"><input type="checkbox" name="Acepta_contacto" value="Sí" required><span>Acepto que ARES Digital use estos datos para responder esta consulta.</span></label>
           <div class="form-footer"><button class="button button-primary" type="submit">Enviar consulta <span>↗</span></button><small>Respondemos personalmente. No compartimos tus datos.</small></div>
