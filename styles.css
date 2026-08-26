@@ -74,7 +74,8 @@ h1,h2,h3 { font-family: "Manrope", sans-serif; margin-top: 0; }
 .visual-label { margin: 42px 0 8px; color: #8faac1; font-size: 12px; }
 .visual-number { font: 700 30px "Manrope"; letter-spacing: -.04em; }
 .chart { height: 150px; margin: 20px 0 12px; display: flex; align-items: end; gap: 12px; padding: 18px 10px 0; border-bottom: 1px solid rgba(255,255,255,.12); background: repeating-linear-gradient(to bottom, transparent, transparent 37px, rgba(255,255,255,.05) 38px); }
-.chart span { flex: 1; height: var(--h); min-width: 12px; border-radius: 5px 5px 0 0; background: linear-gradient(to top, rgba(22,114,232,.4), var(--cyan)); box-shadow: 0 0 15px rgba(48,213,230,.1); }
+.chart span { flex: 1; min-width: 12px; border-radius: 5px 5px 0 0; background: linear-gradient(to top, rgba(22,114,232,.4), var(--cyan)); box-shadow: 0 0 15px rgba(48,213,230,.1); }
+.chart-bar-36 { height: 36%; }.chart-bar-48 { height: 48%; }.chart-bar-43 { height: 43%; }.chart-bar-66 { height: 66%; }.chart-bar-61 { height: 61%; }.chart-bar-82 { height: 82%; }.chart-bar-94 { height: 94%; }
 .metric-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; padding-top: 12px; }
 .metric-row div { display: flex; flex-direction: column; gap: 5px; }
 .metric-row small { color: #7894ab; font-size: 10px; }.metric-row b { font: 600 13px "Manrope"; }
