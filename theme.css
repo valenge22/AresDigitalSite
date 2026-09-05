@@ -1,0 +1,44 @@
+/* Paleta neutra por defecto y modo oscuro basado en azul ARES. */
+.button-primary{background:#1769d2;box-shadow:0 10px 24px rgba(23,105,210,.18)}
+.nav-tools{display:flex;align-items:center;gap:8px}
+.theme-toggle{display:inline-flex;align-items:center;gap:8px;padding:9px 11px;border:1px solid #cdd4dc;border-radius:8px;background:rgba(255,255,255,.7);color:#35404f;font-size:12px;font-weight:700;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.theme-toggle:hover{border-color:#1769d2;color:#1769d2}
+.theme-toggle-icon{font-size:16px;line-height:1;color:#1769d2}
+
+/* Filas de servicios: interacción editorial inspirada en la referencia, usando la paleta ARES. */
+@media(hover:hover) and (pointer:fine){
+  .service-entry{position:relative;margin-inline:-16px;padding:26px 16px;transition:background .28s ease,transform .28s ease,color .28s ease}
+  .service-entry:hover{z-index:1;transform:translateX(5px);border-color:transparent;color:#081a31}
+  .service-entry:hover p{color:#173451}
+  .service-entry.tone-sky:hover{background:#77b9f3}
+  .service-entry.tone-violet:hover{background:#9d91e8}
+  .service-entry.tone-blue:hover{background:#5c91d2}
+  .service-entry.tone-indigo:hover{background:#7d8ee6}
+  .service-entry.tone-cyan:hover{background:#72b8d7}
+}
+
+body.is-dark{--paper:#0a2d50;--white:#0d355d;--ink:#f4f8fc;--muted:#b7c8d9;--line:#245177;--blue:#63a9ff;background:#0a2d50;color:#f4f8fc}
+body.is-dark .site-header.scrolled{background:rgba(8,38,69,.9);border-bottom-color:rgba(104,164,220,.22)}
+body.is-dark .main-nav{color:#c8d8e8}
+body.is-dark .nav-cta,body.is-dark .theme-toggle,body.is-dark .button-secondary{border-color:#44749d;background:rgba(11,49,86,.72);color:#f4f8fc}
+body.is-dark .theme-toggle-icon,body.is-dark .nav-cta span{color:#7bc0ff}
+body.is-dark .theme-toggle:hover,body.is-dark .nav-cta:hover{border-color:#7bc0ff;color:#fff}
+body.is-dark .hero,body.is-dark .about,body.is-dark .contact,body.is-dark .projects{background:#0d355d;border-color:#245177}
+body.is-dark .products,body.is-dark .process{background:#0a2d50}
+body.is-dark .services,body.is-dark .final-cta,body.is-dark .site-footer{background:#061f3a}
+body.is-dark .hero-lead,body.is-dark .section-intro>p:last-child,body.is-dark .product-copy>p:not(.product-kicker),body.is-dark .project-info>p:not(.project-meta),body.is-dark .about-copy p,body.is-dark .contact-intro>p:not(.eyebrow),body.is-dark .process-list p{color:#b7c8d9}
+body.is-dark .about-copy p:first-child{color:#f4f8fc}
+body.is-dark .product-feature,.is-dark .project-item,.is-dark .process-list li{border-color:#245177}
+body.is-dark .feature-list{color:#d4e0ec}
+body.is-dark .product-preview,.is-dark .hero-shot{border-color:#3a6a92;box-shadow:0 16px 40px rgba(0,0,0,.2)}
+body.is-dark .project-form{background:#082947;border-color:#2e5f87}
+body.is-dark .project-form label{color:#dce8f3}
+body.is-dark .project-form input:not([type="checkbox"]),body.is-dark .project-form textarea,body.is-dark .project-form select{border-color:#3a668b;background:#0d355d;color:#f4f8fc}
+body.is-dark .project-form select option{background:#0d355d;color:#f4f8fc}
+body.is-dark .form-consent{color:#b7c8d9!important}
+body.is-dark .form-footer small{color:#9eb5ca}
+body.is-dark .instagram-link{border-color:#7398b8}
+body.is-dark .project-meta,.is-dark .product-kicker{color:#a8c2d9}
+body.is-dark .button-primary{background:#2680eb;box-shadow:0 10px 24px rgba(4,19,40,.28)}
+
+@media(max-width:720px){.theme-toggle{padding:9px}.theme-toggle-text{display:none}.theme-toggle-icon{font-size:18px}.nav-tools{gap:2px}body.is-dark .main-nav{background:rgba(8,38,69,.98);border-color:#2e5f87}body.is-dark .menu-button span{background:#f4f8fc}}
