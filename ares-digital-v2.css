@@ -17,7 +17,11 @@ h1, h2, h3, .brand { font-family: "Manrope", sans-serif; letter-spacing: -.035em
 .section { padding: 120px 0; }
 .eyebrow { color: var(--v2-blue); font-size: .72rem; font-weight: 700; letter-spacing: .18em; }
 .site-header { min-height: 88px; background: rgba(8, 17, 31, .94); border-bottom: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(18px); }
-.site-header.is-scrolled { background: rgba(8, 17, 31, .98); box-shadow: 0 12px 34px rgba(0,0,0,.18); }
+.site-header.scrolled, .site-header.is-scrolled { background: rgba(8, 17, 31, .98); border-bottom-color: rgba(255,255,255,.09); box-shadow: 0 12px 34px rgba(0,0,0,.18); }
+.site-header.scrolled .brand, .site-header.scrolled .main-nav > a:not(.nav-cta) { color: #b8c2d0; }
+.site-header.scrolled .brand { color: #fff; }
+.site-header.scrolled .brand b { color: var(--v2-cyan); }
+.site-header.scrolled .nav-cta { color: #fff; border-color: #34455d; background: transparent; }
 .nav-wrap { min-height: 88px; }
 .brand { color: #fff; font-size: 1.18rem; font-weight: 700; }
 .brand b { color: var(--v2-cyan); }
