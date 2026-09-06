@@ -1,6 +1,7 @@
 /* Capturas reales de productos: se muestran completas y sin deformación. */
 .hero-shot{position:absolute;overflow:hidden;margin:0;border:1px solid #d9dfe6;border-radius:11px;background:#fff;box-shadow:var(--shadow)}
 .hero-shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.hero-shot picture,.product-preview picture,.project-image picture{display:block;height:100%}
 .hero-shot-stock{width:88%;height:330px;right:0;top:0}
 .hero-shot-control{width:55%;height:205px;left:0;bottom:0}
 .product-preview{margin:0;padding:0}
