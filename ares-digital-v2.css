@@ -35,8 +35,8 @@ h1, h2, h3, .brand { font-family: "Manrope", sans-serif; letter-spacing: -.035em
 .menu-button span { background: #fff; }
 .hero { min-height: 760px; padding: 176px 0 112px; overflow: hidden; background: radial-gradient(circle at 78% 32%, rgba(37,99,235,.1), transparent 31%), linear-gradient(180deg,#fff 0%,#f7f9fc 100%); }
 .hero::before { content: ""; position: absolute; inset: 88px 0 auto; height: 1px; background: linear-gradient(90deg,transparent,rgba(37,99,235,.22),transparent); }
-.hero-layout { grid-template-columns: minmax(0,.84fr) minmax(520px,1.16fr); gap: 76px; align-items: center; }
-.hero-copy { max-width: 590px; }
+.hero-layout { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(48px,6vw,76px); align-items: center; isolation: isolate; }
+.hero-copy { position: relative; z-index: 2; max-width: 590px; min-width: 0; }
 .hero h1 { max-width: 780px; margin: 20px 0 26px; color: var(--v2-navy); font-size: clamp(3.6rem, 6vw, 6.5rem); line-height: .94; letter-spacing: -.075em; }
 .hero h1 span { color: var(--v2-blue); }
 .hero-lead { max-width: 570px; color: var(--v2-muted); font-size: clamp(1.05rem,1.45vw,1.25rem); line-height: 1.7; }
@@ -45,15 +45,15 @@ h1, h2, h3, .brand { font-family: "Manrope", sans-serif; letter-spacing: -.035em
 .button-primary { background: var(--v2-blue); box-shadow: 0 12px 30px rgba(37,99,235,.22); }
 .button-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 17px 34px rgba(37,99,235,.28); }
 .button-secondary { color: var(--v2-navy); border-color: var(--v2-line); background: rgba(255,255,255,.72); }
-.hero-products { min-height: 490px; }
-.hero-shot { overflow: hidden; border: 1px solid rgba(17,24,39,.12); border-radius: 16px; background: #fff; box-shadow: var(--v2-shadow); }
+.hero-products { position: relative; z-index: 1; justify-self: end; width: 100%; max-width: 590px; min-width: 0; min-height: 490px; }
+.hero-shot { overflow: hidden; max-width: 100%; border: 1px solid rgba(17,24,39,.12); border-radius: 16px; background: #fff; box-shadow: var(--v2-shadow); }
 .hero-shot::before, .product-preview::before, .project-image::before { content: ""; display: block; height: 30px; background: linear-gradient(90deg,#f4f6f9,#fff); border-bottom: 1px solid #e8edf3; }
 .hero-shot::after, .product-preview::after, .project-image::after { content: ""; position: absolute; top: 12px; left: 14px; width: 7px; height: 7px; border-radius: 50%; background: #cbd5e1; box-shadow: 13px 0 #cbd5e1,26px 0 #cbd5e1; }
-.hero-shot-stock { z-index: 2; width: 90%; transform: translate(5%, 0); }
-.hero-shot-control { z-index: 3; width: 64%; right: -1%; bottom: 3%; transform: none; }
+.hero-shot-stock { z-index: 2; right: 0; left: auto; width: min(90%, 560px); transform: none; }
+.hero-shot-control { z-index: 3; right: 0; left: auto; bottom: 3%; width: min(64%, 390px); transform: none; }
 .hero-shot img, .product-preview img, .project-image img { width: 100%; opacity: 1; filter: none; transform: none; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
 .hero-shot:hover img, .product-preview:hover img, .project-image:hover img { transform: scale(1.012); }
-.visual-note { right: auto; bottom: 1%; left: 1%; padding: 8px 12px; border: 1px solid #dce3ec; border-radius: 999px; color: #68768a; background: rgba(255,255,255,.88); box-shadow: 0 8px 24px rgba(8,17,31,.06); }
+.visual-note { right: 0; bottom: -10%; left: auto; padding: 8px 12px; border: 1px solid #dce3ec; border-radius: 999px; color: #68768a; background: rgba(255,255,255,.88); box-shadow: 0 8px 24px rgba(8,17,31,.06); }
 @media (max-width: 980px) {
   .container { width: min(100% - 36px, 760px); }
   .main-nav { background: var(--v2-navy); border-color: rgba(255,255,255,.09); }
@@ -61,7 +61,7 @@ h1, h2, h3, .brand { font-family: "Manrope", sans-serif; letter-spacing: -.035em
   .hero { min-height: auto; padding-top: 146px; }
   .hero-layout { grid-template-columns: 1fr; gap: 62px; }
   .hero-copy { max-width: 680px; }
-  .hero-products { width: min(100%, 720px); min-height: 460px; }
+  .hero-products { justify-self: center; width: min(100%, 720px); max-width: 720px; min-height: 460px; }
 }
 @media (max-width: 640px) {
   .container { width: min(100% - 28px, 560px); }
@@ -71,7 +71,7 @@ h1, h2, h3, .brand { font-family: "Manrope", sans-serif; letter-spacing: -.035em
   .hero { padding: 126px 0 76px; }
   .hero h1 { font-size: clamp(3rem,15vw,4.7rem); }
   .hero-products { min-height: 330px; }
-  .hero-shot-stock { width: 96%; transform: translate(2%,0); }
+  .hero-shot-stock { width: 96%; transform: none; }
   .hero-shot-control { width: 76%; bottom: 3%; }
   .section { padding: 84px 0; }
 }
