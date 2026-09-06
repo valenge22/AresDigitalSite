@@ -2,8 +2,8 @@
 
 ## Estado encontrado
 
-- No hay GA4, Google Tag Manager, Meta Pixel ni Cloudflare Web Analytics activos en el sitio.
-- No se agregó un identificador ficticio ni un segundo proveedor.
+- GA4 está configurado con el flujo `G-09WV5L4N22`.
+- No hay Google Tag Manager, Meta Pixel ni Cloudflare Web Analytics activos en el sitio.
 - `analytics.js` deja una capa de eventos compatible con `gtag` y `dataLayer`.
 
 ## Eventos
@@ -18,9 +18,9 @@
 
 No se envían nombres, emails, teléfonos, mensajes ni ningún dato ingresado en el formulario.
 
-## Configuración pendiente de GA4
+## Configuración de GA4
 
-Hace falta crear o elegir una propiedad y un flujo web en GA4. Con el ID real `G-XXXXXXXXXX`, agregar el Google tag oficial en el `<head>` de `index.html` y `gracias.html`, y habilitar en la CSP `https://www.googletagmanager.com` para scripts y `https://www.google-analytics.com` para conexiones. No usar el valor de ejemplo.
+El Google tag se carga una sola vez en `index.html` y `gracias.html`; la inicialización compartida está en `google-analytics.js`. La CSP permite exclusivamente los endpoints necesarios para cargar el tag y enviar medición.
 
 Los parámetros personalizados que se quieran consultar en informes deben registrarse como dimensiones personalizadas en GA4. Marcar `form_submit` como evento clave.
 
