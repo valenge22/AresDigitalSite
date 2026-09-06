@@ -227,3 +227,52 @@ body.is-dark .project-form input, body.is-dark .project-form select, body.is-dar
   .hero-actions .button { width: 100%; }
   .hero-shot-control { right: 0; }
 }
+
+/* Final contrast pass: studio story and contact form */
+.about {
+  border-block: 1px solid #dbe5f1;
+  background:
+    radial-gradient(circle at 86% 46%, rgba(37,99,235,.12), transparent 24%),
+    linear-gradient(135deg, #f4f7fb 0%, #eaf1f9 100%);
+}
+.about-layout { min-height: 390px; padding-block: 44px; }
+.about-layout::before { right: 2%; top: 50%; color: rgba(37,99,235,.075); transform: translateY(-50%); }
+.about-copy { padding: 34px 38px; border: 1px solid rgba(190,205,222,.82); border-radius: 18px; background: rgba(255,255,255,.7); box-shadow: 0 18px 44px rgba(8,17,31,.06); backdrop-filter: blur(8px); }
+.about-copy p:last-child { margin-bottom: 0; }
+
+.contact { background: linear-gradient(180deg, #fff 0%, #f7f9fc 100%); }
+.project-form { border-color: #c7d3e1; background: #eef3f9; box-shadow: 0 24px 60px rgba(8,17,31,.1); }
+.project-form label { position: relative; color: #26364b; font-weight: 650; }
+.project-form .optional { position: absolute; top: 0; left: 76px; color: #64748b; font-weight: 500; }
+.project-form input:not([type="checkbox"]),
+.project-form select,
+.project-form textarea {
+  min-height: 50px;
+  border: 1.5px solid #b7c5d6;
+  background: #fff;
+  box-shadow: inset 0 1px 2px rgba(8,17,31,.035);
+}
+.project-form textarea { min-height: 138px; }
+.project-form input::placeholder, .project-form textarea::placeholder { color: #6f8299; opacity: 1; }
+.project-form input:hover, .project-form select:hover, .project-form textarea:hover { border-color: #8fa4bc; }
+.project-form input:focus, .project-form select:focus, .project-form textarea:focus { border-color: var(--v2-blue); background: #fff; box-shadow: 0 0 0 4px rgba(37,99,235,.13); }
+.form-consent { color: #44566c !important; }
+.form-consent input { width: 18px; height: 18px; border: 1px solid #8193a8; }
+.form-footer small { color: #596b80; }
+
+body.is-dark .about { border-color: #253247; background: radial-gradient(circle at 86% 46%, rgba(34,211,238,.08), transparent 25%), #0a1320; }
+body.is-dark .about-layout::before { color: rgba(34,211,238,.05); }
+body.is-dark .about-copy { border-color: #2b3a4f; background: rgba(16,27,43,.82); box-shadow: 0 20px 48px rgba(0,0,0,.2); }
+body.is-dark .project-form { background: #101b2b; border-color: #3a4b62; }
+body.is-dark .project-form input:not([type="checkbox"]), body.is-dark .project-form select, body.is-dark .project-form textarea { border-color: #52647b; background: #0b1421; }
+body.is-dark .form-consent { color: #c0cada !important; }
+body.is-dark .form-footer small { color: #a6b3c5; }
+
+@media (max-width: 980px) {
+  .about-layout { min-height: 0; padding-block: 10px; }
+  .about-copy { padding: 30px; }
+}
+@media (max-width: 640px) {
+  .about-copy { padding: 24px 20px; border-radius: 14px; }
+  .project-form .optional { left: 72px; }
+}
