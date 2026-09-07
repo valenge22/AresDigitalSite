@@ -66,6 +66,7 @@ if (projectForm) {
   });
 }
 
+document.querySelectorAll('.product-preview').forEach(item => item.classList.add('reveal', 'ares-product-reveal'));
 const revealItems = document.querySelectorAll('.reveal');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
