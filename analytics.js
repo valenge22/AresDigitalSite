@@ -26,6 +26,10 @@
       trackEvent('cta_click', { location: 'hero', cta_name: 'view_products' });
     } else if (target.matches('.nav-cta[href="#contacto"]')) {
       trackEvent('cta_click', { location: 'navbar', cta_name: 'contact' });
+    } else if (target.matches('.final-cta .button-primary[href="#contacto"]')) {
+      trackEvent('cta_click', { location: 'final_cta', cta_name: 'project_contact' });
+    } else if (target.matches('.service-link[href="#contacto"]')) {
+      trackEvent('cta_click', { location: 'services', cta_name: 'project_contact' });
     }
 
     if (target.matches('.instagram-link, a[href*="instagram.com"]')) {
