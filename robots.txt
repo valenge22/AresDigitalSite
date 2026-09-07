@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aresdigital.site/sitemap.xml
