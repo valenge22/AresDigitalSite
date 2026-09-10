@@ -284,6 +284,21 @@ body {
 .site-footer { background: var(--ares-navy-deep); }
 body.is-dark { color-scheme: dark; }
 
+/* Superficies oscuras y tarjetas claras: el texto nunca hereda un tono de bajo contraste. */
+body:not(.is-dark) .about .about-copy { background: #f4f7fb; border-color: #d3deea; }
+body:not(.is-dark) .about .about-copy p,
+body:not(.is-dark) .about .about-copy p:first-child { color: #172233; }
+body:not(.is-dark) .about .about-copy p + p { color: #40536a; }
+.services .section-intro > p:last-child,
+.services .service-entry p { color: #c8d5e3; }
+.site-footer .footer-top > p,
+.site-footer .footer-links a,
+.site-footer .footer-instagram { color: #c1cfde; }
+body.is-dark .about .about-copy { background: #102b48; border-color: #3c6288; }
+body.is-dark .about .about-copy p,
+body.is-dark .about .about-copy p:first-child { color: #edf5fc; }
+body.is-dark .about .about-copy p + p { color: #c7d8e9; }
+
 @media (max-width: 720px) {
   body { font-size: 15px; }
   .hero h1 { max-width: 12ch; font-size: clamp(2.75rem, 12vw, 4.2rem); letter-spacing: -0.04em; }
