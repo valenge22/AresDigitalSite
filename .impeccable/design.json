@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-10T00:00:00-03:00",
+  "title": "Design System: ARES Digital",
+  "extensions": {
+    "colorMeta": {
+      "navy": { "role": "neutral", "displayName": "Azul marino ARES", "canonical": "#071426", "tonalRamp": ["#071426", "#0d2946", "#173b60", "#29577f", "#46749d", "#7097ba", "#aac6dc", "#e7f1f8"] },
+      "blue": { "role": "primary", "displayName": "Azul ARES", "canonical": "#2474d8", "tonalRamp": ["#0b2e64", "#124680", "#1b5ca6", "#2474d8", "#4b91e6", "#79afeF", "#b4d5fa", "#e9f4ff"] },
+      "paper": { "role": "neutral", "displayName": "Papel técnico", "canonical": "#f4f6f8", "tonalRamp": ["#18222e", "#3f4c5a", "#647083", "#909ba8", "#bac2cb", "#d7dde3", "#edf0f3", "#f4f6f8"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Manrope Display", "purpose": "Titulares directos de capacidad y producto." },
+      "body": { "displayName": "Inter Body", "purpose": "Lectura y formularios claros." }
+    },
+    "shadows": [
+      { "name": "product-hover", "value": "14px 18px 0 rgba(36, 116, 216, .11)", "purpose": "Protagonismo de una captura de producto al explorarla." }
+    ],
+    "motion": [
+      { "name": "interface-reveal", "value": "transform/filter/opacity 0.34s ease", "purpose": "Capturas de producto: foco progresivo en desktop." },
+      { "name": "service-state", "value": "background/color/transform 0.23s ease", "purpose": "Cambio de color de las filas de servicio." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "980px" },
+      { "name": "mobile", "value": "720px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal en un bloque de contenido.",
+      "html": "<button class=\"ds-btn-primary\">Contanos tu proyecto</button>",
+      "css": ".ds-btn-primary { min-height:48px; padding:0 18px; border:0; border-radius:6px; background:#2474d8; color:#fff; font:700 .84rem Inter,sans-serif; cursor:pointer; transition:background .2s ease,transform .2s ease; } .ds-btn-primary:hover { background:#1d64bd; transform:translateY(-2px); } .ds-btn-primary:focus-visible { outline:3px solid #71b7ff; outline-offset:3px; }"
+    },
+    {
+      "name": "Campo de formulario",
+      "kind": "input",
+      "refersTo": "project-form",
+      "description": "Campo de contacto con label real y foco visible.",
+      "html": "<label class=\"ds-field\">Email<input type=\"email\" placeholder=\"nombre@empresa.com\"></label>",
+      "css": ".ds-field { display:grid; gap:8px; color:#172233; font:700 .82rem Inter,sans-serif; } .ds-field input { padding:12px 13px; border:1px solid #bfcbd7; border-radius:6px; background:#fff; color:#172233; font:400 1rem Inter,sans-serif; } .ds-field input:focus { outline:3px solid #b4d5fa; border-color:#2474d8; }"
+    },
+    {
+      "name": "Fila de servicio",
+      "kind": "custom",
+      "refersTo": "service-entry",
+      "description": "Servicio en estructura editorial con estado activo de color.",
+      "html": "<article class=\"ds-service\"><strong>Software a medida</strong><p>Sistemas y automatizaciones para procesos específicos.</p></article>",
+      "css": ".ds-service { display:grid; grid-template-columns:.66fr 1.34fr; gap:22px; padding:27px 14px; border-top:1px solid rgba(203,224,247,.16); color:#fff; font-family:Inter,sans-serif; transition:background .23s ease,color .23s ease,transform .23s ease; } .ds-service p { margin:0; color:#aebdce; } .ds-service:hover { background:#70a7df; color:#061426; transform:translateX(7px); } .ds-service:hover p { color:#173554; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Dossier de producto",
+    "overview": "ARES Digital se presenta como un estudio que construye productos reales. La interfaz combina superficies azul marino con pausas claras y capturas auténticas. La tecnología se expresa con precisión y evidencia, no con neón.",
+    "keyCharacteristics": ["Jerarquía editorial fuerte", "Capturas de producto como prueba", "Azul ARES como acento funcional", "Alternancia de superficies profundas y claras"],
+    "rules": [
+      { "name": "Accent Restraint", "body": "El azul ARES guía una acción o marca información; no se convierte en brillo ambiental.", "section": "colors" },
+      { "name": "Proof-First", "body": "Una captura auténtica tiene prioridad sobre una sombra, glow o tarjeta decorativa.", "section": "elevation" }
+    ],
+    "dos": ["Do usar interfaces reales como prueba de capacidad.", "Do mantener superficies grandes y una acción clara por bloque."],
+    "donts": ["Don't usar fondos tornasolados, neón, glow o partículas.", "Don't inventar clientes, métricas, integrantes o capturas de sistemas."]
+  }
+}
