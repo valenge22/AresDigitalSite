@@ -32,6 +32,11 @@
       trackEvent('cta_click', { location: 'services', cta_name: 'project_contact' });
     }
 
+    if (target.matches('[data-whatsapp-link]')) {
+      const location = target.closest('.site-header') ? 'navbar' : target.closest('.contact') ? 'contact' : 'footer';
+      trackEvent('whatsapp_click', { location, cta_name: 'whatsapp' });
+    }
+
     if (target.matches('.instagram-link, a[href*="instagram.com"]')) {
       trackEvent('instagram_click', { location: target.closest('.contact') ? 'contact' : 'footer', cta_name: 'instagram' });
     }

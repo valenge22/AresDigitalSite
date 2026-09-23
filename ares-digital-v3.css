@@ -249,6 +249,13 @@ body {
 .project-info > p:not(.project-meta),
 .about-copy p,
 .contact-intro > p:not(.eyebrow) { max-width: 62ch; }
+.contact-channels { display: grid; justify-items: start; gap: 16px; }
+.contact-whatsapp { display: grid; grid-template-columns: 1fr auto; column-gap: 18px; width: min(100%, 330px); padding: 15px 16px; border: 1px solid #a9bdcf; border-radius: 8px; background: #fff; color: var(--ares-ink); line-height: 1.25; transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+.contact-whatsapp span { color: var(--ares-slate); font-size: .78rem; font-weight: 600; }
+.contact-whatsapp b { margin-top: 5px; grid-column: 1; font-family: "Manrope", sans-serif; font-size: .94rem; letter-spacing: -.02em; }
+.contact-whatsapp i { grid-column: 2; grid-row: 1 / span 2; align-self: center; color: var(--ares-signal); font-style: normal; }
+.contact-whatsapp:hover { border-color: var(--ares-signal); background: #f5f9ff; transform: translateY(-2px); }
+.contact-channels .instagram-link { padding-bottom: 4px; }
 .section-intro h2 { max-width: 15ch; font-weight: 750; }
 .product-kicker,
 .group-label,
@@ -282,6 +289,8 @@ body {
 .project-form textarea:hover,
 .project-form select:hover { border-color: #8fa3b6; }
 .site-footer { background: var(--ares-navy-deep); }
+.footer-contact { display: grid; justify-items: start; gap: 11px; color: #c1cfde; font-size: 14px; }
+.footer-contact a:hover { color: #fff; }
 body.is-dark { color-scheme: dark; }
 
 /* Superficies oscuras y tarjetas claras: el texto nunca hereda un tono de bajo contraste. */
@@ -298,6 +307,9 @@ body.is-dark .about .about-copy { background: #102b48; border-color: #3c6288; }
 body.is-dark .about .about-copy p,
 body.is-dark .about .about-copy p:first-child { color: #edf5fc; }
 body.is-dark .about .about-copy p + p { color: #c7d8e9; }
+body.is-dark .contact-whatsapp { border-color: #3a668d; background: #0c3153; color: #edf5fc; }
+body.is-dark .contact-whatsapp span { color: #b9cadd; }
+body.is-dark .contact-whatsapp:hover { border-color: #8fc3ff; background: #123b60; }
 
 @media (max-width: 720px) {
   body { font-size: 15px; }
@@ -307,4 +319,5 @@ body.is-dark .about .about-copy p + p { color: #c7d8e9; }
   .section-intro h2 { max-width: 12ch; }
   .service-entry { min-height: auto; }
   .project-form { box-shadow: none; }
+  .contact-whatsapp { width: min(100%, 360px); }
 }
