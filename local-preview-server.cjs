@@ -12,11 +12,15 @@ const contentTypes = {
 };
 
 http.createServer((request, response) => {
-  const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
+  let pathname;
+  try { pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname); }
+  catch { response.writeHead(400); response.end('Solicitud inv?lida'); return; }
   const requested = pathname === '/' ? '/index.html' : pathname;
   const filePath = path.resolve(root, '.' + requested);
-
-  if (!filePath.startsWith(root)) {
+  const relative = path.relative(root, filePath);
+  if (relative === '..' || relative.startsWith('..' + path.sep) || path.isAbsolute(relative) ||
+      relative.split(path.sep).some(part => part.startsWith('.')) ||
+      !Object.hasOwn(contentTypes, path.extname(filePath))) {
     response.writeHead(403);
     response.end('Acceso no permitido');
     return;
